@@ -51,7 +51,9 @@ main{
 
 main .main-nft{
     border-radius: 0.9rem;
+    position: relative;
 }
+
 
 .main-title h2{
     font-size: 22px;
@@ -123,11 +125,6 @@ main .main-nft{
     border-radius: 50%;
     border: 1px solid var(--justWhite);
     margin-right: 1em;
-}
-
-.main-creator img:hover{
-    background-image: url("../images/icon-view.svg");
-    filter: opacity(0.5);
 }
 
 .main-creator p{
