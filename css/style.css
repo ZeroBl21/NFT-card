@@ -13,7 +13,6 @@
     --DarkBlue: hsl(215, 32%, 27%);
     --justWhite: hsl(0, 0%, 100%);
 
-
 }
 
 html,body{
@@ -24,7 +23,7 @@ html,body{
 }
 
 
-.prueba{
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
