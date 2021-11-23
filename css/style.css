@@ -16,19 +16,62 @@
 }
 
 html,body{
-    height: 100%;
     background-color: var(--veryDarkBlue);
     color: var(--softBlue);
     font-family: 'Outfit', sans-serif;
-}
-
-
-.wrapper{
+    
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
+
+
+/* NFT Image Start*/
+
+.main-nft{
+    position: relative;
+}
+
+.main-nft a img{
+    border-radius: 0.9rem;
+    position: relative;
+}
+
+.main-nft a{
+    display: block;
+}
+
+.main-nft a:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00fff7;
+    border-radius: 0.9rem;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.6;
+    -webkit-animation: overlay-fade 0.7s linear;
+            animation: overlay-fade 0.7s linear;
+}
+
+.main-nft a:hover::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../images/icon-view.svg");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    -webkit-animation: fade 0.7s linear;
+            animation: fade 0.7s linear;
+}
+
+/* NFT Image End */
 
 /* Main Start */
 
@@ -48,25 +91,20 @@ main{
     -moz-box-shadow: 0px 17px 44px 5px rgba(0,0,0,0.42);
 }
 
-main .main-nft{
-    border-radius: 0.9rem;
-    position: relative;
-}
 
-
-.main-title h2{
+.main-title h1{
     font-size: 22px;
     font-weight: bold;
     line-height: 4.3rem;
 }
 
-.main-title h2 a{
+.main-title h1 a{
     text-decoration: none;
     color: var(--justWhite);
     transition:color .2s ease-out;
 }
 
-.main-title h2 a:hover{
+.main-title h1 a:hover{
     color: var(--Cyan);
 }
 
@@ -77,7 +115,10 @@ main .main-nft{
     color: var(--softBlue);
 }
 
-/* Info */
+
+/* Main End */
+
+/* Info Start */
 
 .main-info{
     display: flex;
@@ -95,6 +136,9 @@ main .main-nft{
 
 .main-info .etherium{
     display: inline-block;
+    position: relative;
+    top: 3px;
+    right: 2px;
     height: 18px;
     width: 16px;
     background: url(../images/icon-ethereum.svg) no-repeat center;
@@ -103,13 +147,19 @@ main .main-nft{
 
 .main-info .clock{
     display: inline-block;
+    position: relative;
+    top: 3px;
+    right: 2px;
     height: 18px;
     width: 16px;
     background: url(../images/icon-clock.svg) no-repeat center;
     background-size: contain;
 }
 
-/* Creator */
+/* Info End */
+
+
+/* Creator Start */
 
 .main-creator{
     display: flex;
@@ -141,7 +191,11 @@ main .main-nft{
     color: var(--Cyan);
 }
 
-/* Atrribution */
+
+/* Creator End */
+
+
+/* Atrribution Start*/
 
 .attribution{
     font-size: 12px;
@@ -153,4 +207,43 @@ main .main-nft{
 
 .attribution a{
     color: hsl(228, 45%, 44%);
+}
+
+
+/* Attribution End */
+
+/* Animations Start*/
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes overlay-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 60%;
+    }
+}
+@keyframes overlay-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 60%;
+    }
 }
